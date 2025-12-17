@@ -37,10 +37,7 @@ You can bundle your app as a standalone EXE using PyInstaller.
 
 Step 1 Build as a single-file executable (--onefile)
 ```bash
-pyinstaller --onefile --windowed ^
-  --add-data "tesseract;tesseract" ^
-  --add-data "poppler;poppler" ^
-  ocr_pdf_gui.py
+pyinstaller --onefile --windowed --add-data "tesseract;tesseract" --add-data "poppler;poppler" ocr_pdf_gui.py
 ```
 
 Notes:
@@ -49,10 +46,7 @@ Notes:
 
 On Linux/macOS, use : instead of ;:
 ```bash
-pyinstaller --onefile --windowed \
-  --add-data "tesseract:tesseract" \
-  --add-data "poppler:poppler" \
-  ocr_pdf_gui.py
+pyinstaller --onefile --windowed --add-data "tesseract:tesseract" --add-data "poppler:poppler" ocr_pdf_gui.py
 ```
 
 Resulting EXE will be in dist/ocr_pdf_gui.exe.
@@ -61,10 +55,7 @@ The EXE automatically uses bundled Tesseract and Poppler, no path selection need
 
 Step 2 Build as a folder (--onedir) — faster for testing
 ```
-pyinstaller --windowed ^
-  --add-data "tesseract;tesseract" ^
-  --add-data "poppler;poppler" ^
-  ocr_pdf_gui.py
+pyinstaller --windowed --add-data "tesseract;tesseract" --add-data "poppler;poppler" ocr_pdf_gui.py
 ```
 
 Creates dist/ocr_pdf_gui/ folder with all files.
